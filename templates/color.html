@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+    <style>
+        .preview {
+            width: 200px;
+            height: 100px;
+            border: 2px solid #000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pick a Color</h2>
+    <form method="POST">
+        <input type="text" name="color" placeholder="e.g. red or #ff0000">
+        <button type="submit">Preview</button>
+    </form>
+
+    {% if color %}
+    <div class="preview" style="background-color: red;"></div>
+    <p>Selected Color: <strong>{{ color }}</strong></p>
+    {% endif %}
+</body>
+</html>
